@@ -1,121 +1,270 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
+        <!-- Encodage des caractères -->
         <meta charset="UTF-8">
+
+        <!-- Titre affiché dans l'onglet du navigateur -->
         <title>Mon Portfolio</title>
+
+        <!-- Adaptation de la page aux écrans mobiles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Description pour les moteurs de recherche (SEO) -->
         <meta name="description" content="Bienvenue sur mon portfolio, où je partage mes projets et réalisations en développement web.">
+
+        <!-- Lien vers la feuille de style CSS -->
+        <link rel="stylesheet" href="style.css">
     </head>
-    
+
     <body>
-        <!-- En-tête avec navigation -->
+
+        <!-- =============================================
+             EN-TÊTE : barre de navigation fixe en haut
+        ============================================= -->
         <header>
-            <nav>
-                <div class="logo"><img src="img/logo.jpg" alt="logo de novatrix"></div>
-                <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#work">Travail</a></li>
-                    <li><a href="#resume">Curriculum vitae</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <nav class="nav__bar">
+
+                <!-- Logo du site -->
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="logo de novatrix" class="logo__image">
+                </div>
+
+                <!-- Liste des liens de navigation -->
+                <ul class="nav__menu">
+                    <!-- Lien vers la section d'accueil -->
+                    <li class="nav__item"><a href="#home">Accueil</a></li>
+
+                    <!-- Lien vers la section À propos -->
+                    <li class="nav__item"><a href="#about">À propos</a></li>
+
+                    <!-- Lien vers la section Travail / Projets -->
+                    <li class="nav__item"><a href="#work">Travail</a></li>
+
+                    <!-- Lien vers la section Curriculum vitae -->
+                    <li class="nav__item"><a href="#resume">Curriculum vitae</a></li>
+
+                    <!-- Lien vers la section Contact (mis en valeur) -->
+                    <li class="nav__item"><a href="#contact">Contact</a></li>
                 </ul>
+
             </nav>
         </header>
-       
-        <!-- Contenu principal -->
+
+        <!-- =============================================
+             CONTENU PRINCIPAL
+        ============================================= -->
         <main>
-            
-            <section id="home">
-                <h1>Mon Portfolio</h1>
-                <p>Bienvenue sur mon portfolio, où je partage mes projets et réalisations en développement web. Découvrez mes compétences, mes expériences et mes passions à travers ce site.</p>
-                <img src="img/photo_profil.jpg" alt="photo de profil">
-            </section>
-            
-            <!-- Section À propos -->
-            <section id="about">
-                <h2>À propos</h2>
-                <p>Bienvenue sur mon portfolio ! Je suis un développeur web passionné par la création de sites web modernes et fonctionnels. Avec une solide formation en informatique et une expérience pratique dans le développement web, je m'efforce de fournir des solutions innovantes et de qualité.</p>
-                
-                <dl>
-                    <dt>Nom :</dt>
-                    <dd>DIARRASSOUBA</dd>
-                    <dt>Prénom :</dt>
-                    <dd>NAYEREHOUA</dd>
-                    <dt>Âge :</dt>
-                    <dd>24 ans</dd>
-                    <dt>Nationalité :</dt>
-                    <dd>Ivoirienne</dd>
-                    <dt>Email :</dt>
-                    <dd>nayerehoua79@gmail.com</dd>
-                    <dt>Téléphone :</dt>
-                    <dd>+225 05 01 07 01 90</dd>
-                </dl>
-            </section>
 
-            <!--travail-->
-            <section id="work">
-                <h2>Travail</h2>
-                <p>Voici quelques-uns de mes projets récents :</p>
+            <!-- ─────────────────────────────────────
+                 SECTION ACCUEIL (Hero)
+                 Présentation rapide avec photo
+            ───────────────────────────────────── -->
+            <div class="home" id="home">
 
-                <article>
-                    <h3>Projet 1: Site de commerce électronique</h3>
-                    <p>Un site de commerce électronique développé avec React et Node.js, offrant une expérience utilisateur fluide et des fonctionnalités avancées de gestion de produits.</p>
-                    <img src="img/e-commerce.webp" alt="capture d'écran du projet 1">
-                </article>
+                <!-- Photo de profil -->
+                <img src="img/photo_profil.jpg" alt="photo de profil" class="home__image">
 
-                <article>
-                    <h3>Projet 2: Application de gestion de tâches</h3>
-                    <p>Une application de gestion de tâches créée avec Angular et Firebase, permettant aux utilisateurs d'organiser efficacement leurs activités quotidiennes.</p>
-                    <img src="img/application-gestion-taches.webp" alt="capture d'écran du projet 2">
-                </article>
+                <!-- Titre principal de la page -->
+                <h1 class="home__title">Mon Portfolio</h1>
 
-                <article>
-                    <h3>Projet 3: Blog personnel</h3>
-                    <p>Un blog personnel conçu avec HTML, CSS et PHP, mettant en avant mes réflexions sur le développement web et les technologies émergentes.</p>
-                    <video controls width="640" height="360" poster="video/poster.jpg" preload="metadata">
-                        <source src="video/portfolio-demo.mp4" type="video/mp4">
-                        <source src="video/portfolio-demo.webm" type="video/webm">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
-                </article>
-            </section>
+                <!-- Phrase d'accroche -->
+                <p class="home__description">
+                    Bienvenue sur mon portfolio, où je partage mes projets et réalisations
+                    en développement web. Découvrez mes compétences, mes expériences et
+                    mes passions à travers ce site.
+                </p>
 
-            <!-- Section Curriculum vitae -->
-            <section id="resume">
+            </div>
+
+            <!-- ─────────────────────────────────────
+                 SECTION À PROPOS
+                 Informations personnelles et biographie
+            ───────────────────────────────────── -->
+            <div class="about" id="about">
+
+                <!-- Titre de la section -->
+                <h2 class="about__title">À propos</h2>
+
+                <!-- Paragraphe de présentation -->
+                <p class="about__paragraphe">
+                    Bienvenue sur mon portfolio ! Je suis un développeur web passionné
+                    par la création de sites web modernes et fonctionnels. Avec une solide
+                    formation en informatique et une expérience pratique dans le développement
+                    web, je m'efforce de fournir des solutions innovantes et de qualité.
+                </p>
+
+                <!-- Carte d'informations personnelles -->
+                <div class="about__information">
+
+                    <!-- Liste de définitions : terme + valeur -->
+                    <dl class="about__details">
+
+                        <!-- Nom de famille -->
+                        <dt class="about__term">Nom :</dt>
+                        <dd class="about__definition">DIARRASSOUBA</dd>
+
+                        <!-- Prénom -->
+                        <dt class="about__term">Prénom :</dt>
+                        <dd class="about__definition">NAYEREHOUA</dd>
+
+                        <!-- Âge -->
+                        <dt class="about__term">Âge :</dt>
+                        <dd class="about__definition">24 ans</dd>
+
+                        <!-- Nationalité -->
+                        <dt class="about__term">Nationalité :</dt>
+                        <dd class="about__definition">Ivoirienne</dd>
+
+                        <!-- Adresse e-mail -->
+                        <dt class="about__term">Email :</dt>
+                        <dd class="about__definition">nayerehoua79@gmail.com</dd>
+
+                        <!-- Numéro de téléphone -->
+                        <dt class="about__term">Téléphone :</dt>
+                        <dd class="about__definition">+225 05 01 07 01 90</dd>
+
+                    </dl>
+                </div>
+
+            </div>
+
+            <!-- ─────────────────────────────────────
+                 SECTION TRAVAIL
+                 Présentation des projets réalisés
+            ───────────────────────────────────── -->
+            <div class="work" id="work">
+
+                <!-- Titre de la section -->
+                <h2 class="work__title">Travail</h2>
+
+                <!-- Sous-titre descriptif -->
+                <p class="work__description">Voici quelques-uns de mes projets récents :</p>
+
+                <!-- ── Projet 1 : E-commerce ── -->
+                <div class="work__">
+                    <article>
+                        <!-- Bloc texte du projet -->
+                        <div class="work__text">
+                            <h3 class="work__project-title">Projet 1 : Site de commerce électronique</h3>
+                            <p class="work__project-description">
+                                Un site de commerce électronique développé avec React et Node.js,
+                                offrant une expérience utilisateur fluide et des fonctionnalités
+                                avancées de gestion de produits.
+                            </p>
+                        </div>
+                        <!-- Capture d'écran du projet -->
+                        <img class="work__project-image" src="img/e-commerce.webp" alt="capture d'écran du projet 1">
+                    </article>
+                </div>
+
+                <!-- ── Projet 2 : Gestion de tâches ── -->
+                <div>
+                    <article>
+                        <!-- Bloc texte du projet -->
+                        <div class="work__text">
+                            <h3 class="work__project-title">Projet 2 : Application de gestion de tâches</h3>
+                            <p class="work__project-description">
+                                Une application de gestion de tâches créée avec Angular et Firebase,
+                                permettant aux utilisateurs d'organiser efficacement leurs activités quotidiennes.
+                            </p>
+                        </div>
+                        <!-- Capture d'écran du projet -->
+                        <img class="work__project-image" src="img/application-gestion-taches.webp" alt="capture d'écran du projet 2">
+                    </article>
+                </div>
+
+                <!-- ── Projet 3 : Blog personnel (avec vidéo) ── -->
+                <div>
+                    <article>
+                        <!-- Bloc texte du projet -->
+                        <div class="work__text">
+                            <h3 class="work__project-title">Projet 3 : Blog personnel</h3>
+                            <p class="work__project-description">
+                                Un blog personnel conçu avec HTML, CSS et PHP, mettant en avant
+                                mes réflexions sur le développement web et les technologies émergentes.
+                            </p>
+                        </div>
+
+                        <!-- Vidéo de démonstration du projet -->
+                        <video controls poster="video/poster.jpg" preload="metadata">
+                            <!-- Source principale en MP4 -->
+                            <source src="video/portfolio-demo.mp4" type="video/mp4">
+                            <!-- Source alternative en WebM -->
+                            <source src="video/portfolio-demo.webm" type="video/webm">
+                            <!-- Message si le navigateur ne supporte pas la vidéo -->
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </article>
+                </div>
+
+            </div>
+
+            <!-- ─────────────────────────────────────
+                 SECTION CURRICULUM VITAE
+                 Lien de téléchargement du CV PDF
+            ───────────────────────────────────── -->
+            <div id="resume">
+
+                <!-- Titre de la section -->
                 <h2>Curriculum vitae</h2>
+
+                <!-- Texte d'invitation -->
                 <p>Vous pouvez télécharger mon CV en cliquant sur le lien ci-dessous :</p>
+
+                <!-- Bouton de téléchargement (ouvre dans un nouvel onglet) -->
                 <p><a href="doc/cv.pdf" target="_blank">Télécharger le CV</a></p>
-            </section>
-            
-            <!-- Section Contact -->
-            <section id="contact">
+
+            </div>
+
+            <!-- ─────────────────────────────────────
+                 SECTION CONTACT
+                 Formulaire d'envoi de message
+            ───────────────────────────────────── -->
+            <div id="contact">
+
+                <!-- Titre de la section -->
                 <h2>Contact</h2>
+
+                <!-- Formulaire envoyé vers submit_form.php en méthode POST -->
                 <form method="post" action="submit_form.php">
-                   <div> 
+
+                    <!-- Champ : Nom -->
+                    <div>
                         <label for="name">Nom :</label>
                         <input type="text" id="name" name="name" required>
-                   </div> 
-                   
-                   <div>
+                    </div>
+
+                    <!-- Champ : Email -->
+                    <div>
                         <label for="email">Email :</label>
                         <input type="email" id="email" name="email" required>
-                   </div>
-                   
-                   <div>
+                    </div>
+
+                    <!-- Champ : Message (zone de texte multi-lignes) -->
+                    <div>
                         <label for="message">Message :</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
-                   </div>
+                    </div>
 
+                    <!-- Bouton d'envoi du formulaire -->
                     <button type="submit">Envoyer</button>
+
                 </form>
-            </section>
-            
+            </div>
+
         </main>
-        
-        <!-- Pied de page -->
+
+        <!-- =============================================
+             PIED DE PAGE
+        ============================================= -->
         <footer>
-            <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+            <div>
+                <!-- Mention de droits d'auteur -->
+                <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+            </div>
         </footer>
-        
+
     </body>
 </html>
