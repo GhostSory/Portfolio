@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bienvenue sur mon portfolio, où je partage mes projets et réalisations en développement web.">
+    </head>
+    
+    <body>
+        <!-- En-tête avec navigation -->
+        <header>
+            <nav>
+                <div class="logo"><img src="img/logo.jpg" alt="logo de novatrix"></div>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#work">Travail</a></li>
+                    <li><a href="#resume">Curriculum vitae</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+       
+        <!-- Contenu principal -->
+        <main>
+            
+            <section id="home">
+                <h1>Mon Portfolio</h1>
+                <p>Bienvenue sur mon portfolio, où je partage mes projets et réalisations en développement web. Découvrez mes compétences, mes expériences et mes passions à travers ce site.</p>
+                <img src="img/photo_profil.jpg" alt="photo de profil">
+            </section>
+            
+            <!-- Section À propos -->
+            <section id="about">
+                <h2>À propos</h2>
+                <p>Bienvenue sur mon portfolio ! Je suis un développeur web passionné par la création de sites web modernes et fonctionnels. Avec une solide formation en informatique et une expérience pratique dans le développement web, je m'efforce de fournir des solutions innovantes et de qualité.</p>
+                
+                <dl>
+                    <dt>Nom :</dt>
+                    <dd>DIARRASSOUBA</dd>
+                    <dt>Prénom :</dt>
+                    <dd>NAYEREHOUA</dd>
+                    <dt>Âge :</dt>
+                    <dd>24 ans</dd>
+                    <dt>Nationalité :</dt>
+                    <dd>Ivoirienne</dd>
+                    <dt>Email :</dt>
+                    <dd>nayerehoua79@gmail.com</dd>
+                    <dt>Téléphone :</dt>
+                    <dd>+225 05 01 07 01 90</dd>
+                </dl>
+            </section>
+
+            <!--travail-->
+            <section id="work">
+                <h2>Travail</h2>
+                <p>Voici quelques-uns de mes projets récents :</p>
+
+                <article>
+                    <h3>Projet 1: Site de commerce électronique</h3>
+                    <p>Un site de commerce électronique développé avec React et Node.js, offrant une expérience utilisateur fluide et des fonctionnalités avancées de gestion de produits.</p>
+                    <img src="img/e-commerce.webp" alt="capture d'écran du projet 1">
+                </article>
+
+                <article>
+                    <h3>Projet 2: Application de gestion de tâches</h3>
+                    <p>Une application de gestion de tâches créée avec Angular et Firebase, permettant aux utilisateurs d'organiser efficacement leurs activités quotidiennes.</p>
+                    <img src="img/application-gestion-taches.webp" alt="capture d'écran du projet 2">
+                </article>
+
+                <article>
+                    <h3>Projet 3: Blog personnel</h3>
+                    <p>Un blog personnel conçu avec HTML, CSS et PHP, mettant en avant mes réflexions sur le développement web et les technologies émergentes.</p>
+                    <video controls width="640" height="360" poster="video/poster.jpg" preload="metadata">
+                        <source src="video/portfolio-demo.mp4" type="video/mp4">
+                        <source src="video/portfolio-demo.webm" type="video/webm">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </article>
+            </section>
+
+            <!-- Section Curriculum vitae -->
+            <section id="resume">
+                <h2>Curriculum vitae</h2>
+                <p>Vous pouvez télécharger mon CV en cliquant sur le lien ci-dessous :</p>
+                <p><a href="doc/cv.pdf" target="_blank">Télécharger le CV</a></p>
+            </section>
+            
+            <!-- Section Contact -->
+            <section id="contact">
+                <h2>Contact</h2>
+                <form method="post" action="submit_form.php">
+                   <div> 
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                   </div> 
+                   
+                   <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                   </div>
+                   
+                   <div>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                   </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+            
+        </main>
+        
+        <!-- Pied de page -->
+        <footer>
+            <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+        </footer>
+        
+    </body>
+</html>
